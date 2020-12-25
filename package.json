@@ -1,0 +1,23 @@
+{
+  "name": "wiredcraft-backend-test",
+  "version": "1.0.0",
+  "description": "Make sure you read the whole document carefully and follow the guidelines in it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wiredcraft/test-backend.git"
+  },
+  "author": "Aimad Harilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wiredcraft/test-backend/issues"
+  },
+  "homepage": "https://github.com/Wiredcraft/test-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.8"
+  }
+}
