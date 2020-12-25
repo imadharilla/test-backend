@@ -4,6 +4,7 @@
   "description": "Make sure you read the whole document carefully and follow the guidelines in it.",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,12 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.11.8"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1"
   }
 }
