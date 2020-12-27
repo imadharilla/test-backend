@@ -1,11 +1,21 @@
 const express = require('express')
 const app = express()
+const bodyParser = require('body-parser')
+const responseTime = require('response-time')
+const compression = require('compression')
 const util = require('util')
 const db = require('./database')
 const config = require('./configuration')
 const routing = require('./routing')
+const helmet = require('helmet')
 
-app.use('/api', routing)
+app.use(helmet())
+app.use(responseTime())
+app.use(compression())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.json())
+
+app.use('/', routing)
 
 exports.start = async () => {
   try {

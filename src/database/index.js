@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const find = require('find')
+const path = require('path')
 const config = require('../configuration')
 const url = config.get('MONGO_DATABASE_URL')
 const db = config.get('MONGO_DATABASE_NAME')
@@ -25,3 +27,9 @@ exports.connect = () => {
     connection.once('open', resolve)
   })
 }
+
+exports.model = key => mongoose.model(key)
+
+const modelPaths = find.fileSync(/model.js$/, path.resolve(__dirname, '..'))
+// Import models so mongoose have access in run time
+modelPaths.forEach(path => require(path))
