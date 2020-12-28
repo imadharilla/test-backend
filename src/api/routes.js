@@ -1,8 +1,6 @@
 const router = require('express').Router({ mergeParams: true })
+const users = require('./users/routes')
 
-router.get('/', (req, res) => {
-  console.log('haha')
-  return res.send({ message: 'tnaket' })
-})
+router.use('/users', users)
 
 module.exports = router
